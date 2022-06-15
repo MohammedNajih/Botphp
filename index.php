@@ -153,10 +153,10 @@ file_put_contents("saiko.json",json_encode($saiko));
 }
 $xch = $saiko['ch'];
 ///
-$members = explode("\n",file_get_contents("members.txt"));
+$members = explode("\n",$chat_id);
 $count = count($members) -1;
 if($tc == 'private' and !in_array($from_id,$members)){
-file_put_contents('members.txt',$from_id."\n",FILE_APPEND);
+$chat_id,$from_id."\n",FILE_APPEND);
 }
 ///
 $oop = $xch;
